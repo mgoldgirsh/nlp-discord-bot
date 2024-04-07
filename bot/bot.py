@@ -29,9 +29,11 @@ async def on_message(message):
     """
     if message.author == client.user:
         return
-
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    await message.channel.send(f"Hello, {message.author} said \"{message.content}\"")
+    # if message.content.startswith('$hello'):
+    #
+    #     print(f'{client.user} said hello')
+    #     await message.channel.send('Hello!')
 
 
 if __name__ == "__main__":

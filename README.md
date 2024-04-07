@@ -9,3 +9,11 @@ To use this program simply run to start up and launch the discord bot.
 ```commandline
 python3 bot.py
 ```
+
+## Copyright
+The dataset for the `conversational_model` was taken from 
+[http://yanran.li/dailydialog](http://yanran.li/dailydialog).
+
+arXiv: https://arxiv.org/abs/1710.03957
+
+> Yanran Li, Hui Su, Xiaoyu Shen, Wenjie Li, Ziqiang Cao, and Shuzi Niu. DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset. IJCNLP 2017.
