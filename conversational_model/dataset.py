@@ -8,7 +8,7 @@ from tokens import Token
 
 class DialogDataset(Dataset):
     """
-    Represents a dataset that keeps track of the dialog and the emotion codes associated with it
+    Represents a dataset that keeps track of the dialog  associated with it
     for training.
     """
 
