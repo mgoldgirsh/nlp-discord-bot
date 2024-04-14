@@ -21,7 +21,7 @@ class DiscordModel:
         conversation_idx = len(self.dialog.split(f'{Token.USER_TOKEN}')) - 1
         encoded_user_input = self.tokenizer(self.dialog, padding=True, truncation=True, return_tensors='pt')
         out_response = self.discord_model.generate(encoded_user_input['input_ids'],
-                                                   max_length=min(1024 - encoded_user_input['input_ids'].size(-1), 150),
+                                                   max_length=min(1024 - encoded_user_input['input_ids'].size(-1), 100),
                                                    do_sample=True,
                                                    top_k=50,
                                                    eos_token_id=self.tokenizer.eos_token_id,

@@ -19,10 +19,11 @@ class DialogDataset(Dataset):
             self.tokenizer.pad_token = self.tokenizer.eos_token
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
 
-        self.train_data = dataset['train']
-        self.train_tokenized_data = self.tokenize_data(self.train_data)
+        self.train_tokenized_data = self.tokenize_data(dataset['train'])
+        self.validation_tokenized_data = self.tokenize_data(dataset['validation'])
 
-        self.encoded_dialogs = self.encode_dialogs()
+        self.encoded_dialogs = self.encode_dialogs(self.train_tokenized_data)
+        self.test_encoded_dialogs = self.encoded_dialogs(self.test_encoded_dialogs)
 
     def tokenize_data(self, loaded_data: dict) -> list:
         tokenized_data = []
@@ -47,8 +48,8 @@ class DialogDataset(Dataset):
             tokenized_data.append(tokenized_str.strip())
         return tokenized_data
 
-    def encode_dialogs(self):
-        return self.tokenizer(self.train_tokenized_data, padding=True, truncation=True, return_tensors='pt')
+    def encode_dialogs(self, tokenized_data):
+        return self.tokenizer(tokenized_data, padding=True, truncation=True, return_tensors='pt')
 
     def __len__(self):
         return len(self.train_tokenized_data)

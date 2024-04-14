@@ -3,6 +3,7 @@ from pathlib import Path
 
 from bot.utils import read_token
 from bot.bot import NLPBot
+from chan_model.fourChanNeural import ChanModel
 from conversational_model.discord_model import DiscordModel
 
 if __name__ == "__main__":
@@ -15,7 +16,8 @@ if __name__ == "__main__":
 
     # setup the model to use in the discord bot
     model = DiscordModel(Path(__name__).absolute().parent)
+    chan_model = ChanModel()
 
     # setup the discord bot with the model
-    client = NLPBot(intents, model)
+    client = NLPBot(intents, model, chan_model)
     client.run(TOKEN)

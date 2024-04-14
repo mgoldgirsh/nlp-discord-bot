@@ -5,3 +5,5 @@ token.key
 dataset
 output
 logs
+chan_model/data
+*.keras

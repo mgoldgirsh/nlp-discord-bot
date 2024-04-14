@@ -1,0 +1,84 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello"],
+      "responses": [
+        "Hello, I hope you're ready to see the worst chatbot in existence",
+        "Bye",
+        "Stop, don't talk to me."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye!",
+        "Nice talking with you",
+        "cya",
+        "goodbye",
+        "good bye"
+      ],
+      "responses": [
+        "Shut up",
+        "Your not rich enough to talk to me bye.",
+        "Nice talking with you too you idiot"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks for helping me"
+      ],
+      "responses": [
+        "Don't thank me, I never helped you",
+        "What I did does not deserve thanks",
+        "Dumb question, dumb answer"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "options",
+      "patterns": [
+        "How you could help me?",
+        "What you can do?",
+        "What help you provide?",
+        "How you can be helpful?",
+        "Anything else?"
+      ],
+      "responses": [
+        "I can provide the location of the nearest liquor store",
+        "Give you 5 reasons why you should procrastinate tonight"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "political",
+      "patterns": [
+        "What do you think about Trump?",
+        "Should I vote for Trump?"
+      ],
+      "responses": [
+        "Our messiah",
+        "Imagine being this stupid, are people here that clever enough to baitpost like this? I doubt it wholeheartedly",
+        "Next question"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "random",
+      "patterns": ["Give me a fun fact", "Another one", "I want to hear more"],
+      "responses": [
+        "The First Computer Programmer Was a woman.",
+        "The Japanese army in WWII was evil",
+        "Swearing isn't swearing if you use it enough"
+      ],
+      "context": [""]
+    }
+  ]
+}
