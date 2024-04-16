@@ -29,7 +29,7 @@ class NLPBot(discord.Client):
         :param message: the input message provided to generate the response from
         :return: the output response from the input.
         """
-        if self.current_model == "discord":
+        if self.current_model == "discordgpt":
             return self.discord_bot_model.generate(message)
         else:
             ints = self.chan_model.predict_class(message)
