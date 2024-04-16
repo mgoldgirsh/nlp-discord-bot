@@ -5,11 +5,13 @@ import torch
 
 from dataset import DialogDataset
 
+# load the models + dataset
 dataset_name = "daily_dialog"
 model_name = "openai-community/gpt2"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 dialog_dataset = DialogDataset(dataset_name, model_name)
 
+# create the training args
 training_args = TrainingArguments(
     save_strategy="no",
     warmup_steps=len(dialog_dataset) // 64,
@@ -24,6 +26,7 @@ training_args = TrainingArguments(
     per_device_train_batch_size=4
 )
 
+# finetune the model
 trainer = Trainer(model=model,
                   args=training_args,
                   train_dataset=dialog_dataset)

@@ -5,8 +5,9 @@ import numpy as np
 import os
 
 import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
-from pathlib import Path
 
 from tensorflow.keras.models import load_model
 
