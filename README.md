@@ -2,6 +2,9 @@
 A natural language processing discord chatbot that will be able 
 to have conversations with Discord users as well as answer any questions asked it.
 
+## Instructions
+> [https://www.youtube.com/watch?v=v9T_OltUaok](https://www.youtube.com/watch?v=v9T_OltUaok)
+
 ## Usage
 To use this program simply run to start up and launch the discord bot. 
 > Note: to run the program you need a `token.key` file that contains the discord
